@@ -1,7 +1,12 @@
-# spotify-status-api ![Spotify Logo](./spotify-logo.png)
+# spotify-status-api <img src="public/spotify_logo.png" alt="Spotify Logo" width="25"/>
+
+
 
 
 Lightweight API to display recently played tracks from Spotify. Easily integrable as a code snippet for web applications. Simple setup with no complex configurations.
+
+
+
 
 ## Authorization
 This API uses OAuth 2.0 for authentication. To run this, you will need the following Spotify credentials:
