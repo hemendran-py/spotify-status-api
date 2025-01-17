@@ -3,8 +3,9 @@
 
 
 
-Lightweight API to display recently played tracks from Spotify. Easily integrable as a code snippet for web applications. Simple setup with no complex configurations.
+Lightweight API to display recently played tracks from Spotify. Easily integrable as a code snippet for web applications. Simple setup with no complex configurations.  
 
+<img src="public/image.png" alt="screenshot" width="600"/>
 
 
 
