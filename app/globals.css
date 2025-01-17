@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.homepage-container{
+  background-color: #121212;
+  padding: 1%;
+  border-radius: 15px;
+  width: 100%;               /* Make it take up the full width available */
+  max-width: 35%;            /* Limit the maximum width to 35% of the container */
+  padding-bottom: 2%;
+  word-wrap: break-word;     /* Ensure long words break into the next line if needed */
+  
+}
+
+.title {
+  color: #1DB954; /* Spotify Green */
+  font-size: 2rem;
+  margin-bottom: 20px;
+ 
+}
+
+.track-info {
+  display: flex;
+  align-items: flex-start;  /* Align image and text vertically */
+  justify-content: start; /* Center content horizontally */
+  gap: 20px;  /* Add some space between image and text */
+  word-wrap: break-word;
+}
+
+.track-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  
+}
+
+.track-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 15px;
+  
+}
+
+.track-name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.track-artist {
+  color: #b3b3b3;
+  font-size: 1.5rem;
+  margin: 5px 0 0 0;
+}
+.spotify-logo{
+
+  height: 30px;
+  margin-right: 10px;
+}
+.spotify-header{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
