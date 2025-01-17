@@ -6,7 +6,6 @@ export default function HomePage() {
   const [track, setTrack] = useState(null);
   const [error, setError] = useState(null);
 
-
   async function fetchTrack() {
     try {
       const response = await fetch('/api/recently-played');
@@ -22,7 +21,6 @@ export default function HomePage() {
     }
   }
 
-
   useEffect(() => {
     fetchTrack();  
 
@@ -30,7 +28,6 @@ export default function HomePage() {
       fetchTrack();  
     }, 300000);  
 
-   
     return () => clearInterval(interval);
   }, []);  
 
@@ -40,7 +37,7 @@ export default function HomePage() {
 
   return (
     <div className="homepage-container">
-      <div className='spotify-header'>
+      <div className="spotify-header">
         <img className="spotify-logo" src="/spotify_logo.png" alt="Spotify Logo" />
         <h1 className="title">Recently Played</h1>
       </div>
@@ -50,7 +47,14 @@ export default function HomePage() {
           <img className="track-image" src={track.image} alt={track.name} />
           <div className="track-details">
             <h3 className="track-name">{track.name}</h3>
-            <p className="track-artist"> {track.artist}</p>
+            <p className="track-artist">{track.artist}</p>
+            
+            <button 
+              className="play-now-btn" 
+              onClick={() => window.open(track.url, '_blank')}  
+            >
+              Play Now
+            </button>
           </div>
         </div>
       ) : (
