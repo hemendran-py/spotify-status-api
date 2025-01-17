@@ -49,6 +49,7 @@ export async function GET() {
         name: track.name,
         artist: track.artists.map(artist => artist.name).join(', '),
         image: track.album.images[0]?.url || '',
+        url: track.external_urls.spotify,  // URL for the track on Spotify
       });
     } else {
       return NextResponse.json({ message: 'No recently played track found.' });
