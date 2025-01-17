@@ -24,15 +24,15 @@ body {
   background-color: #121212;
   padding: 1%;
   border-radius: 15px;
-  width: 100%;               /* Make it take up the full width available */
-  max-width: 35%;            /* Limit the maximum width to 35% of the container */
+  width: 100%;              
+  max-width: 30%;            
   padding-bottom: 2%;
-  word-wrap: break-word;     /* Ensure long words break into the next line if needed */
+  word-wrap: break-word;     
   
 }
 
 .title {
-  color: #1DB954; /* Spotify Green */
+  color: #1DB954; 
   font-size: 2rem;
   margin-bottom: 20px;
  
@@ -40,15 +40,15 @@ body {
 
 .track-info {
   display: flex;
-  align-items: flex-start;  /* Align image and text vertically */
-  justify-content: start; /* Center content horizontally */
-  gap: 20px;  /* Add some space between image and text */
+  align-items: flex-start;  
+  justify-content: start; 
+  gap: 20px; 
   word-wrap: break-word;
 }
 
 .track-image {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 15px;
   
 }
@@ -58,11 +58,12 @@ body {
   flex-direction: column;
   justify-content: center;
   margin-top: 15px;
+  margin-left:3%;
   
 }
 
 .track-name {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
 }
@@ -77,8 +78,62 @@ body {
   height: 30px;
   margin-right: 10px;
 }
+.spotify-logo2{
+
+  height: 30px;
+  
+}
 .spotify-header{
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+.play-now-btn {
+  font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+
+
+  font-size: 20px;
+  font-weight:600; 
+  padding: 10px 20px; 
+  background-color: #494949; 
+  color: rgb(210, 210, 210);
+  border: none; 
+  border-radius: 25px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease, transform 0.3s ease,box-shadow 0.05s ease-in;
+  width:fit-content;
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.play-now-btn:hover {
+  background-color: #121212;
+  transform: scale(0.95);
+
+  box-shadow: 0 0 10px rgba(29, 185, 84, 0.8);
+  
+}
+
+.view-profile{
+  font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;  
+  border-radius: 15px; 
+  background-color: #494949; 
+  color: rgb(210, 210, 210);
+  font-size: 20px;
+  font-weight:600; 
+  padding: 10px 20px; 
+  border: none;
+  margin-left: auto;
+  transition: background-color 0.1s ease ,box-shadow 0.1s ease;
+
+}
+.view-profile:hover{
+  background-color: #121212;
+
+
+  box-shadow: 0 0 7px rgba(29, 185, 84, 0.8);
+  
 }

@@ -39,10 +39,24 @@ async function getRecentlyPlayedTrack(accessToken) {
   return data.items.length ? data.items[0].track : null;
 }
 
+async function getUserProfile(accessToken) {
+  const apiUrl = 'https://api.spotify.com/v1/me';
+
+  const response = await fetch(apiUrl, {
+    headers: {
+      'Authorization': `Bearer ${accessToken}`,
+    },
+  });
+
+  const data = await response.json();
+  return data;
+}
+
 export async function GET() {
   try {
     const accessToken = await refreshAccessToken();
     const track = await getRecentlyPlayedTrack(accessToken);
+    const userProfile = await getUserProfile(accessToken);
 
     if (track) {
       return NextResponse.json({
@@ -50,12 +64,13 @@ export async function GET() {
         artist: track.artists.map(artist => artist.name).join(', '),
         image: track.album.images[0]?.url || '',
         url: track.external_urls.spotify,
+        profileUrl: userProfile.external_urls.spotify,
       });
     } else {
       return NextResponse.json({ message: 'No recently played track found.' });
     }
   } catch (error) {
-    console.error('Error fetching recently played track:', error);
-    return NextResponse.json({ error: 'Failed to fetch recently played track.' }, { status: 500 });
+    console.error('Error fetching data:', error);
+    return NextResponse.json({ error: 'Failed to fetch data.' }, { status: 500 });
   }
 }

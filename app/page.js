@@ -40,6 +40,16 @@ export default function HomePage() {
       <div className="spotify-header">
         <img className="spotify-logo" src="/spotify_logo.png" alt="Spotify Logo" />
         <h1 className="title">Recently Played</h1>
+        <button 
+              className="view-profile " 
+              onClick={() => window.open(track.url, '_blank')}  
+            >
+             
+
+              View Profile
+              
+
+        </button>
       </div>
       
       {track ? (
@@ -50,10 +60,14 @@ export default function HomePage() {
             <p className="track-artist">{track.artist}</p>
             
             <button 
-              className="play-now-btn" 
+              className="play-now-btn  " 
               onClick={() => window.open(track.url, '_blank')}  
             >
-              Play Now
+             
+
+              Play On <img className="spotify-logo2" src="/spotify_logo.png" alt="Spotify Logo" />
+
+
             </button>
           </div>
         </div>
