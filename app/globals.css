@@ -1,139 +1,114 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   color: var(--foreground);
-  background: var(--background);
+  background-color: #727272;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-.homepage-container{
-  background-color: #121212;
-  padding: 1%;
+.homepage-container {
+  background-color: #111111;
+  padding: 20px;
   border-radius: 15px;
-  width: 100%;              
-  max-width: 30%;            
-  padding-bottom: 2%;
-  word-wrap: break-word;     
-  
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  height: fit-content;
+  padding: 30px;
+}
+
+.spotify-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.spotify-logo {
+  height: 30px;
+  margin-right: 10px;
 }
 
 .title {
-  color: #1DB954; 
   font-size: 2rem;
-  margin-bottom: 20px;
- 
+  color: #25d65d;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.view-profile {
+  font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+  border-radius: 15px;
+  background-color: #494949;
+  color: rgb(210, 210, 210);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  transition: background-color 0.1s ease, box-shadow 0.1s ease;
+}
+
+.view-profile:hover {
+  background-color: #121212;
+  box-shadow: 0 0 7px rgba(29, 185, 84, 0.8);
 }
 
 .track-info {
   display: flex;
-  align-items: flex-start;  
-  justify-content: start; 
-  gap: 20px; 
-  word-wrap: break-word;
+  gap: 20px;
 }
 
 .track-image {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   border-radius: 15px;
-  
 }
 
 .track-details {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-top: 15px;
-  margin-left:3%;
-  
+  justify-content: space-between;
+}
+
+.track-text {
+  margin-bottom: auto;
+  margin-top:10PX;
 }
 
 .track-name {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   margin: 0;
+  color: white;
 }
 
 .track-artist {
   color: #b3b3b3;
   font-size: 1.5rem;
-  margin: 5px 0 0 0;
+  margin: 5px 0;
 }
-.spotify-logo{
 
-  height: 30px;
-  margin-right: 10px;
-}
-.spotify-logo2{
-
-  height: 30px;
-  
-}
-.spotify-header{
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
 .play-now-btn {
   font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
-
-
   font-size: 20px;
-  font-weight:600; 
-  padding: 10px 20px; 
-  background-color: #494949; 
+  font-weight: 600;
+  padding: 10px 20px;
+  background-color: #494949;
   color: rgb(210, 210, 210);
-  border: none; 
-  border-radius: 25px; 
-  cursor: pointer; 
-  transition: background-color 0.3s ease, transform 0.3s ease,box-shadow 0.05s ease-in;
-  width:fit-content;
-  margin-top: 10%;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.05s ease-in;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  width: fit-content;
 }
 
 .play-now-btn:hover {
   background-color: #121212;
   transform: scale(0.95);
-
   box-shadow: 0 0 10px rgba(29, 185, 84, 0.8);
-  
 }
 
-.view-profile{
-  font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;  
-  border-radius: 15px; 
-  background-color: #494949; 
-  color: rgb(210, 210, 210);
-  font-size: 20px;
-  font-weight:600; 
-  padding: 10px 20px; 
-  border: none;
-  margin-left: auto;
-  transition: background-color 0.1s ease ,box-shadow 0.1s ease;
-
-}
-.view-profile:hover{
-  background-color: #121212;
-
-
-  box-shadow: 0 0 7px rgba(29, 185, 84, 0.8);
-  
+.spotify-logo2 {
+  height: 20px;
 }

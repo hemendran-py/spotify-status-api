@@ -12,7 +12,7 @@ export default function HomePage() {
       const data = await response.json();
 
       if (data.name) {
-        setTrack(data);  
+        setTrack(data);
       } else {
         setError('No recently played track found.');
       }
@@ -22,14 +22,14 @@ export default function HomePage() {
   }
 
   useEffect(() => {
-    fetchTrack();  
+    fetchTrack();
 
     const interval = setInterval(() => {
-      fetchTrack();  
-    }, 300000);  
+      fetchTrack();
+    }, 300000);
 
     return () => clearInterval(interval);
-  }, []);  
+  }, []);
 
   if (error) {
     return <div>{error}</div>;
@@ -39,35 +39,27 @@ export default function HomePage() {
     <div className="homepage-container">
       <div className="spotify-header">
         <img className="spotify-logo" src="/spotify_logo.png" alt="Spotify Logo" />
-        <h1 className="title">Recently Played</h1>
-        <button 
-              className="view-profile " 
-              onClick={() => window.open(track.url, '_blank')}  
-            >
-             
-
-              View Profile
-              
-
+        <h1 className="title font-semibold">Recently Played</h1>
+        <button
+          className="view-profile"
+          onClick={() => window.open(track.profileUrl, '_blank')}
+        >
+          View Profile
         </button>
       </div>
-      
+
       {track ? (
         <div className="track-info">
           <img className="track-image" src={track.image} alt={track.name} />
           <div className="track-details">
-            <h3 className="track-name">{track.name}</h3>
-            <p className="track-artist">{track.artist}</p>
-            
-            <button 
-              className="play-now-btn  " 
-              onClick={() => window.open(track.url, '_blank')}  
-            >
-             
-
+            <div className="track-text">
+              <h3 className="track-name">{track.name}</h3>
+              <p className="track-artist">{track.artist}</p>
+            </div>
+            <button
+              className="play-now-btn"
+              onClick={() => window.open(track.url, '_blank')}>
               Play On <img className="spotify-logo2" src="/spotify_logo.png" alt="Spotify Logo" />
-
-
             </button>
           </div>
         </div>
@@ -75,5 +67,8 @@ export default function HomePage() {
         <p>Loading...</p>
       )}
     </div>
+
+
+
   );
 }
