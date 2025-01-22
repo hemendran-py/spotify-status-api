@@ -3,7 +3,7 @@
 
 
 
-Lightweight API to display recently played tracks from Spotify. Easily integrable as a code snippet for web applications. Simple setup with no complex configurations.  
+Lightweight API to display recently played tracks from Spotify in your website! . Easily integrable as a code snippet for web applications. Simple setup with no complex configurations.  
 
 <img src="public/image.png" alt="screenshot" width="600"/>
 
@@ -46,7 +46,7 @@ REFRESH_TOKEN=your_spotify_refresh_token
 ```
 npm run dev
 ```
-## How to Integrate this into Your Website  
+## How to Integrate this into Your Website  🚀
 
 **STEP 1: Add Credentials**    
  
@@ -58,9 +58,17 @@ If you are using Next.js 13 (or a similar framework that uses a similar folder s
 
 **STEP 3: Integrate API Functions into Your Website**  
 
-+ In your `pages.js` (or `page.jsx`), copy the relevant functions and return statement from the `pages.jsx` file in this repository.  
-+ Add the copied functions into your own `page.js` (or the appropriate component file in your project).
-+ You can place the return statement inside the existing return block of your page component, or if preferred, create a separate component and include it where you want.
++ add authorization credentials and refresh token("how to get" mentioned in the beginning) in the `.env` file
++ Create a `recent-track.js` file in `components` folder of your project.  
++ copy content from `page.js` from this repository and paste it in your `recent-track.js` file.
++ now import the component in the page where you want the recently played tab to be in.
+  ```
+  import spotify from '../components/recent-track.js';
+  ```
++ and use the component wherever you want in that page!! </br>
+  example:</br>
+  <img src="public/snippet.png" alt="code snippet" width="600"/>
+  
 
 This will allow you to use the backend API to fetch the currently playing or recently played songs from a Spotify account and display them on your site.
   
